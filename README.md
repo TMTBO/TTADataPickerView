@@ -1,6 +1,8 @@
 A Swift picker view allows you to pick the titles you want and the date, time or dateTime in one view
 
-#ScreenShort
+#ScreenShort & gif
+
+![TTADataPickerView](TTADataPickerView.gif)
 
 #Installation
 
