@@ -14,7 +14,7 @@ import UIKit
 final class TTADataPickerViewController: UIViewController {
     
     /// DataPickerView
-    var pickerView: TTADataPickerView? = nil
+    weak var pickerView: TTADataPickerView? = nil
     
     deinit {
         #if DEBUG

@@ -52,11 +52,13 @@ class ViewController: UIViewController {
         let pickerView = TTADataPickerView(title: "TTADataPickerView", type: .text)
         pickerView.type = .time
         pickerView.delegate = self
+        pickerView.show()
     }
     @IBAction func showDateTimeType(_ sender: UIButton) {
         let pickerView = TTADataPickerView(title: "TTADataPickerView", type: .text)
         pickerView.type = .dateTime
         pickerView.delegate = self
+        pickerView.show()
     }
 
 }

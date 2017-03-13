@@ -1,0 +1,7 @@
+language: objective-c
+os: osx
+osx_image: xcode8.2
+
+env:
+  matrix:
+      - TEST_TYPE=iOS
