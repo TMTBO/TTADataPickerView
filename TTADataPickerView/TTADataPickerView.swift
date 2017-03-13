@@ -20,7 +20,7 @@ import UIKit
 
 /// The component tpye of the TTADataPickerView
 
-enum TTADataPickerViewType {
+public enum TTADataPickerViewType {
     /// pickerView default
     case text
     /// datePicker default, date
@@ -33,7 +33,7 @@ enum TTADataPickerViewType {
 
 /// TTADataPickerViewDelegate
 
-protocol TTADataPickerViewDelegate: NSObjectProtocol {
+public protocol TTADataPickerViewDelegate: NSObjectProtocol {
     
     /// When the type of dataPickerView is `.text`, you should use this function to handle the selection
     ///
@@ -70,7 +70,7 @@ protocol TTADataPickerViewDelegate: NSObjectProtocol {
 
 // MARK: - Optional delegate functions
 
-extension TTADataPickerViewDelegate {
+public extension TTADataPickerViewDelegate {
     
     func dataPickerView(_ pickerView: TTADataPickerView, didSelectTitles titles: [String]) {
         
@@ -94,14 +94,14 @@ extension TTADataPickerViewDelegate {
 }
 
 /// TTADataPickerView
-class TTADataPickerView: UIView {
+open class TTADataPickerView: UIView {
     
     // MARK: - Public properties
     
-    weak var delegate: TTADataPickerViewDelegate?
+    public weak var delegate: TTADataPickerViewDelegate?
     
     /// Picker view component type, for MORE TTADataPickerViewType
-    var type: TTADataPickerViewType = .text {
+    public var type: TTADataPickerViewType = .text {
         didSet {
             switch type {
             case .text:
@@ -124,7 +124,7 @@ class TTADataPickerView: UIView {
     }
     
     /// When the type of pickerView is `.text`, this property should be set
-    internal (set) var textItemsForComponent: [[String]]? {
+    public var textItemsForComponent: [[String]]? {
         didSet {
             pickerView?.reloadAllComponents()
         }
@@ -159,14 +159,14 @@ class TTADataPickerView: UIView {
         setupUI()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         var rect = UIScreen.main.bounds
         rect.size.height = 260 // 216 + 44
         super.init(coder: aDecoder)
         setupUI()
     }
     
-    convenience init(title: String, type: TTADataPickerViewType) {
+    public convenience init(title: String, type: TTADataPickerViewType) {
         self.init(frame: CGRect.zero)
         toolBar.titleButton.title = title
         configType(type: type)
@@ -364,7 +364,7 @@ extension TTADataPickerView: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     @available(iOS 2.0, *)
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let componentCount = pickerView.numberOfComponents
         for index in 0..<componentCount {
             guard index != component && index > component else { continue }
