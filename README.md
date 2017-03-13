@@ -2,7 +2,7 @@ A Swift picker view allows you to pick the titles you want and the date, time or
 
 #ScreenShort & gif
 
-![TTADataPickerView](TTADataPickerView.gif)
+![TTADataPickerView](https://github.com/TMTBO/TTADataPickerView/blob/master/TTADataPickerView.gif)
 
 #Installation
 
