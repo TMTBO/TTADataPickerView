@@ -28,9 +28,24 @@ class TTADataPickerViewDemoUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testUI() {
+        
+        let app = XCUIApplication()
+        let textButton = app.buttons["Text"]
+        textButton.tap()
+        app.otherElements.containing(.staticText, identifier:"TTADataPickerView").children(matching: .other).element.tap()
+        textButton.tap()
+        
+        let toolbarsQuery = app.toolbars
+        let doneButton = toolbarsQuery.buttons["Done"]
+        doneButton.tap()
+        app.otherElements.containing(.staticText, identifier:"First First First").children(matching: .button).matching(identifier: "Date").element(boundBy: 0).tap()
+        doneButton.tap()
+        app.buttons["Time"].tap()
+        toolbarsQuery.buttons["Cancel"].tap()
+        app.otherElements.containing(.staticText, identifier:"Mar 13, 2017").children(matching: .button).matching(identifier: "Date").element(boundBy: 1).tap()
+        doneButton.tap()
+        
     }
     
 }
