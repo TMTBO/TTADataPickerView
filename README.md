@@ -98,7 +98,6 @@ let pickerView = TTADataPickerView(title: "TTADataPickerView", type: .text)
 * 7 Delegate Functions
 
 ```
-
 // MARK: - TTADataPickerViewDelegate
 
 extension ViewController: TTADataPickerViewDelegate {
