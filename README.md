@@ -82,8 +82,15 @@ let pickerView = TTADataPickerView(title: "TTADataPickerView", type: .text)
             // something you want to do after show the pickerView
         }
 	```
+	
+* 6 Set the selectedTitles or selectedDate when the pickerView appers
 
-* 6 Configure the TTADataPickerView's apperance
+	```
+    pickerView.selectedTitles(titles)
+    pickerView.selectedDate(date)
+	```
+
+* 7 Configure the TTADataPickerView's apperance
 
 	```
 	// config the TTADataPickerView's apperance
@@ -95,7 +102,7 @@ let pickerView = TTADataPickerView(title: "TTADataPickerView", type: .text)
 	apperance.setTitleColor(color: .cyan)
 	```
 	
-* 7 Delegate Functions
+* 8 Delegate Functions
 
 ```
 // MARK: - TTADataPickerViewDelegate
@@ -132,9 +139,4 @@ extension ViewController: TTADataPickerViewDelegate {
     }
 }
 ```
-
-
-
-
-
 

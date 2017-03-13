@@ -40,6 +40,9 @@ class ViewController: UIViewController {
         pickerView.delegate = self
         // when the pickerView type is .text, configure this property to tell the pickerView what you want to select
         pickerView.textItemsForComponent = [["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth"], ["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth"], ["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth"]]
+        let titles = showLabel.text?.components(separatedBy: " ")
+        // set the selectedTitles when the pickerView appers
+        pickerView.selectedTitles(titles)
         // call show() or show(with completion: (() -> Void)? = nil) to show the pickerView from the bottom of the screen
         pickerView.show()
     }
