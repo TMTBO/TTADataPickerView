@@ -86,8 +86,10 @@ extension ViewController: TTADataPickerViewDelegate {
         // actually you need configure the dateFormatter dateStyle and timeStyle to get the currect date from the `date` parameter
         if pickerView.type == .date {
             dateFormatter.dateStyle = .medium
+            dateFormatter.timeStyle = .none
         } else if pickerView.type == .time {
             dateFormatter.timeStyle = .medium
+            dateFormatter.dateStyle = .none
         } else if pickerView.type == .dateTime {
             dateFormatter.dateStyle = .medium
             dateFormatter.timeStyle = .medium
