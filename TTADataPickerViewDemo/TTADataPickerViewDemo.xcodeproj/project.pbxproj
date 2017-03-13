@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7961D2F31E763BA700E92369 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961D2F21E763BA700E92369 /* AppDelegate.swift */; };
+		7961D2F51E763BA700E92369 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961D2F41E763BA700E92369 /* ViewController.swift */; };
+		7961D2F81E763BA700E92369 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7961D2F61E763BA700E92369 /* Main.storyboard */; };
+		7961D2FA1E763BA700E92369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7961D2F91E763BA700E92369 /* Assets.xcassets */; };
+		7961D2FD1E763BA700E92369 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7961D2FB1E763BA700E92369 /* LaunchScreen.storyboard */; };
+		7961D3081E763BA700E92369 /* TTADataPickerViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961D3071E763BA700E92369 /* TTADataPickerViewDemoTests.swift */; };
+		7961D3131E763BA700E92369 /* TTADataPickerViewDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961D3121E763BA700E92369 /* TTADataPickerViewDemoUITests.swift */; };
+		7961D3371E76717100E92369 /* TTADataPickerTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961D3331E76717100E92369 /* TTADataPickerTitleBarButtonItem.swift */; };
+		7961D3381E76717100E92369 /* TTADataPickerToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961D3341E76717100E92369 /* TTADataPickerToolBar.swift */; };
+		7961D3391E76717100E92369 /* TTADataPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961D3351E76717100E92369 /* TTADataPickerView.swift */; };
+		7961D33A1E76717100E92369 /* TTADataPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961D3361E76717100E92369 /* TTADataPickerViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7961D3041E763BA700E92369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7961D2E71E763BA700E92369 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7961D2EE1E763BA700E92369;
+			remoteInfo = TTADataPickerViewDemo;
+		};
+		7961D30F1E763BA700E92369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7961D2E71E763BA700E92369 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7961D2EE1E763BA700E92369;
+			remoteInfo = TTADataPickerViewDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7961D2EF1E763BA700E92369 /* TTADataPickerViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTADataPickerViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7961D2F21E763BA700E92369 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7961D2F41E763BA700E92369 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7961D2F71E763BA700E92369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7961D2F91E763BA700E92369 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7961D2FC1E763BA700E92369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7961D2FE1E763BA700E92369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7961D3031E763BA700E92369 /* TTADataPickerViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTADataPickerViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7961D3071E763BA700E92369 /* TTADataPickerViewDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTADataPickerViewDemoTests.swift; sourceTree = "<group>"; };
+		7961D3091E763BA700E92369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7961D30E1E763BA700E92369 /* TTADataPickerViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTADataPickerViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7961D3121E763BA700E92369 /* TTADataPickerViewDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTADataPickerViewDemoUITests.swift; sourceTree = "<group>"; };
+		7961D3141E763BA700E92369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7961D3331E76717100E92369 /* TTADataPickerTitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTADataPickerTitleBarButtonItem.swift; sourceTree = "<group>"; };
+		7961D3341E76717100E92369 /* TTADataPickerToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTADataPickerToolBar.swift; sourceTree = "<group>"; };
+		7961D3351E76717100E92369 /* TTADataPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTADataPickerView.swift; sourceTree = "<group>"; };
+		7961D3361E76717100E92369 /* TTADataPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTADataPickerViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7961D2EC1E763BA700E92369 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7961D3001E763BA700E92369 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7961D30B1E763BA700E92369 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7961D2E61E763BA700E92369 = {
+			isa = PBXGroup;
+			children = (
+				7961D3321E76717100E92369 /* TTADataPickerView */,
+				7961D2F11E763BA700E92369 /* TTADataPickerViewDemo */,
+				7961D3061E763BA700E92369 /* TTADataPickerViewDemoTests */,
+				7961D3111E763BA700E92369 /* TTADataPickerViewDemoUITests */,
+				7961D2F01E763BA700E92369 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7961D2F01E763BA700E92369 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7961D2EF1E763BA700E92369 /* TTADataPickerViewDemo.app */,
+				7961D3031E763BA700E92369 /* TTADataPickerViewDemoTests.xctest */,
+				7961D30E1E763BA700E92369 /* TTADataPickerViewDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7961D2F11E763BA700E92369 /* TTADataPickerViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				7961D2F21E763BA700E92369 /* AppDelegate.swift */,
+				7961D2F41E763BA700E92369 /* ViewController.swift */,
+				7961D2F61E763BA700E92369 /* Main.storyboard */,
+				7961D2F91E763BA700E92369 /* Assets.xcassets */,
+				7961D2FB1E763BA700E92369 /* LaunchScreen.storyboard */,
+				7961D2FE1E763BA700E92369 /* Info.plist */,
+			);
+			path = TTADataPickerViewDemo;
+			sourceTree = "<group>";
+		};
+		7961D3061E763BA700E92369 /* TTADataPickerViewDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				7961D3071E763BA700E92369 /* TTADataPickerViewDemoTests.swift */,
+				7961D3091E763BA700E92369 /* Info.plist */,
+			);
+			path = TTADataPickerViewDemoTests;
+			sourceTree = "<group>";
+		};
+		7961D3111E763BA700E92369 /* TTADataPickerViewDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7961D3121E763BA700E92369 /* TTADataPickerViewDemoUITests.swift */,
+				7961D3141E763BA700E92369 /* Info.plist */,
+			);
+			path = TTADataPickerViewDemoUITests;
+			sourceTree = "<group>";
+		};
+		7961D3321E76717100E92369 /* TTADataPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				7961D3331E76717100E92369 /* TTADataPickerTitleBarButtonItem.swift */,
+				7961D3341E76717100E92369 /* TTADataPickerToolBar.swift */,
+				7961D3351E76717100E92369 /* TTADataPickerView.swift */,
+				7961D3361E76717100E92369 /* TTADataPickerViewController.swift */,
+			);
+			name = TTADataPickerView;
+			path = ../TTADataPickerView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7961D2EE1E763BA700E92369 /* TTADataPickerViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7961D3171E763BA700E92369 /* Build configuration list for PBXNativeTarget "TTADataPickerViewDemo" */;
+			buildPhases = (
+				7961D2EB1E763BA700E92369 /* Sources */,
+				7961D2EC1E763BA700E92369 /* Frameworks */,
+				7961D2ED1E763BA700E92369 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TTADataPickerViewDemo;
+			productName = TTADataPickerViewDemo;
+			productReference = 7961D2EF1E763BA700E92369 /* TTADataPickerViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7961D3021E763BA700E92369 /* TTADataPickerViewDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7961D31A1E763BA700E92369 /* Build configuration list for PBXNativeTarget "TTADataPickerViewDemoTests" */;
+			buildPhases = (
+				7961D2FF1E763BA700E92369 /* Sources */,
+				7961D3001E763BA700E92369 /* Frameworks */,
+				7961D3011E763BA700E92369 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7961D3051E763BA700E92369 /* PBXTargetDependency */,
+			);
+			name = TTADataPickerViewDemoTests;
+			productName = TTADataPickerViewDemoTests;
+			productReference = 7961D3031E763BA700E92369 /* TTADataPickerViewDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7961D30D1E763BA700E92369 /* TTADataPickerViewDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7961D31D1E763BA700E92369 /* Build configuration list for PBXNativeTarget "TTADataPickerViewDemoUITests" */;
+			buildPhases = (
+				7961D30A1E763BA700E92369 /* Sources */,
+				7961D30B1E763BA700E92369 /* Frameworks */,
+				7961D30C1E763BA700E92369 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7961D3101E763BA700E92369 /* PBXTargetDependency */,
+			);
+			name = TTADataPickerViewDemoUITests;
+			productName = TTADataPickerViewDemoUITests;
+			productReference = 7961D30E1E763BA700E92369 /* TTADataPickerViewDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7961D2E71E763BA700E92369 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = TobyoTenma;
+				TargetAttributes = {
+					7961D2EE1E763BA700E92369 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EPSPHDMRQR;
+						ProvisioningStyle = Automatic;
+					};
+					7961D3021E763BA700E92369 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EPSPHDMRQR;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7961D2EE1E763BA700E92369;
+					};
+					7961D30D1E763BA700E92369 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EPSPHDMRQR;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7961D2EE1E763BA700E92369;
+					};
+				};
+			};
+			buildConfigurationList = 7961D2EA1E763BA700E92369 /* Build configuration list for PBXProject "TTADataPickerViewDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7961D2E61E763BA700E92369;
+			productRefGroup = 7961D2F01E763BA700E92369 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7961D2EE1E763BA700E92369 /* TTADataPickerViewDemo */,
+				7961D3021E763BA700E92369 /* TTADataPickerViewDemoTests */,
+				7961D30D1E763BA700E92369 /* TTADataPickerViewDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7961D2ED1E763BA700E92369 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7961D2FD1E763BA700E92369 /* LaunchScreen.storyboard in Resources */,
+				7961D2FA1E763BA700E92369 /* Assets.xcassets in Resources */,
+				7961D2F81E763BA700E92369 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7961D3011E763BA700E92369 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7961D30C1E763BA700E92369 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7961D2EB1E763BA700E92369 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7961D2F51E763BA700E92369 /* ViewController.swift in Sources */,
+				7961D3391E76717100E92369 /* TTADataPickerView.swift in Sources */,
+				7961D33A1E76717100E92369 /* TTADataPickerViewController.swift in Sources */,
+				7961D3381E76717100E92369 /* TTADataPickerToolBar.swift in Sources */,
+				7961D3371E76717100E92369 /* TTADataPickerTitleBarButtonItem.swift in Sources */,
+				7961D2F31E763BA700E92369 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7961D2FF1E763BA700E92369 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7961D3081E763BA700E92369 /* TTADataPickerViewDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7961D30A1E763BA700E92369 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7961D3131E763BA700E92369 /* TTADataPickerViewDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7961D3051E763BA700E92369 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7961D2EE1E763BA700E92369 /* TTADataPickerViewDemo */;
+			targetProxy = 7961D3041E763BA700E92369 /* PBXContainerItemProxy */;
+		};
+		7961D3101E763BA700E92369 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7961D2EE1E763BA700E92369 /* TTADataPickerViewDemo */;
+			targetProxy = 7961D30F1E763BA700E92369 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7961D2F61E763BA700E92369 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7961D2F71E763BA700E92369 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7961D2FB1E763BA700E92369 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7961D2FC1E763BA700E92369 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7961D3151E763BA700E92369 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7961D3161E763BA700E92369 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7961D3181E763BA700E92369 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EPSPHDMRQR;
+				INFOPLIST_FILE = TTADataPickerViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = win.tobyotenma.www.TTADataPickerViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		7961D3191E763BA700E92369 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EPSPHDMRQR;
+				INFOPLIST_FILE = TTADataPickerViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = win.tobyotenma.www.TTADataPickerViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		7961D31B1E763BA700E92369 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = EPSPHDMRQR;
+				INFOPLIST_FILE = TTADataPickerViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = win.tobyotenma.www.TTADataPickerViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TTADataPickerViewDemo.app/TTADataPickerViewDemo";
+			};
+			name = Debug;
+		};
+		7961D31C1E763BA700E92369 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = EPSPHDMRQR;
+				INFOPLIST_FILE = TTADataPickerViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = win.tobyotenma.www.TTADataPickerViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TTADataPickerViewDemo.app/TTADataPickerViewDemo";
+			};
+			name = Release;
+		};
+		7961D31E1E763BA700E92369 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = EPSPHDMRQR;
+				INFOPLIST_FILE = TTADataPickerViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = win.tobyotenma.www.TTADataPickerViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = TTADataPickerViewDemo;
+			};
+			name = Debug;
+		};
+		7961D31F1E763BA700E92369 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = EPSPHDMRQR;
+				INFOPLIST_FILE = TTADataPickerViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = win.tobyotenma.www.TTADataPickerViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = TTADataPickerViewDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7961D2EA1E763BA700E92369 /* Build configuration list for PBXProject "TTADataPickerViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7961D3151E763BA700E92369 /* Debug */,
+				7961D3161E763BA700E92369 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7961D3171E763BA700E92369 /* Build configuration list for PBXNativeTarget "TTADataPickerViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7961D3181E763BA700E92369 /* Debug */,
+				7961D3191E763BA700E92369 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7961D31A1E763BA700E92369 /* Build configuration list for PBXNativeTarget "TTADataPickerViewDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7961D31B1E763BA700E92369 /* Debug */,
+				7961D31C1E763BA700E92369 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7961D31D1E763BA700E92369 /* Build configuration list for PBXNativeTarget "TTADataPickerViewDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7961D31E1E763BA700E92369 /* Debug */,
+				7961D31F1E763BA700E92369 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7961D2E71E763BA700E92369 /* Project object */;
+}

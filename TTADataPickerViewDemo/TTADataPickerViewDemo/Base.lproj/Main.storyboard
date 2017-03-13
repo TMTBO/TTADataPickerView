@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TTADataPickerViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heJ-3y-gYS">
+                                <rect key="frame" x="112" y="141" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="12q-IR-wPH"/>
+                                </constraints>
+                                <state key="normal" title="Text"/>
+                                <connections>
+                                    <action selector="showTextType:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MSG-So-43R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLU-XS-swz">
+                                <rect key="frame" x="112" y="251" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="HmH-T8-dBY"/>
+                                </constraints>
+                                <state key="normal" title="Date"/>
+                                <connections>
+                                    <action selector="showDateType:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g5U-NM-fwL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Joa-b7-Lm0">
+                                <rect key="frame" x="112" y="361" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="C7f-Wl-mYM"/>
+                                </constraints>
+                                <state key="normal" title="Time"/>
+                                <connections>
+                                    <action selector="showTimeType:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZXd-rt-ajA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyK-Xb-BdK">
+                                <rect key="frame" x="112" y="471" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="K8q-7P-7XK"/>
+                                </constraints>
+                                <state key="normal" title="Date"/>
+                                <connections>
+                                    <action selector="showDateTimeType:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YNN-bw-WQv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TTADataPickerView" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntm-Cp-5M0">
+                                <rect key="frame" x="16" y="70" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="heJ-3y-gYS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="018-qB-u2O"/>
+                            <constraint firstItem="FyK-Xb-BdK" firstAttribute="top" secondItem="Joa-b7-Lm0" secondAttribute="bottom" constant="80" id="5gN-7W-4qv"/>
+                            <constraint firstItem="Ntm-Cp-5M0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8E9-WQ-Dpo"/>
+                            <constraint firstItem="kLU-XS-swz" firstAttribute="centerX" secondItem="heJ-3y-gYS" secondAttribute="centerX" id="DpV-20-gQV"/>
+                            <constraint firstItem="FyK-Xb-BdK" firstAttribute="width" secondItem="heJ-3y-gYS" secondAttribute="width" id="HfI-TM-Jjm"/>
+                            <constraint firstItem="Joa-b7-Lm0" firstAttribute="top" secondItem="kLU-XS-swz" secondAttribute="bottom" constant="80" id="Lbx-Rn-5jk"/>
+                            <constraint firstItem="heJ-3y-gYS" firstAttribute="top" secondItem="Ntm-Cp-5M0" secondAttribute="bottom" constant="50" id="NhN-hu-CzD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ntm-Cp-5M0" secondAttribute="trailing" id="QjQ-3v-29J"/>
+                            <constraint firstItem="FyK-Xb-BdK" firstAttribute="centerX" secondItem="heJ-3y-gYS" secondAttribute="centerX" id="T78-Ah-tiB"/>
+                            <constraint firstItem="kLU-XS-swz" firstAttribute="width" secondItem="heJ-3y-gYS" secondAttribute="width" id="cKF-Kb-pYU"/>
+                            <constraint firstItem="Ntm-Cp-5M0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="dMC-UY-ZSY"/>
+                            <constraint firstItem="Joa-b7-Lm0" firstAttribute="centerX" secondItem="heJ-3y-gYS" secondAttribute="centerX" id="lj8-D1-YWr"/>
+                            <constraint firstItem="Joa-b7-Lm0" firstAttribute="width" secondItem="heJ-3y-gYS" secondAttribute="width" id="oPt-ul-4Uc"/>
+                            <constraint firstItem="kLU-XS-swz" firstAttribute="top" secondItem="heJ-3y-gYS" secondAttribute="bottom" constant="80" id="sRI-rw-fWb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="showLabel" destination="Ntm-Cp-5M0" id="ezU-dU-I0y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
