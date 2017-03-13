@@ -18,12 +18,12 @@
 
 import UIKit
 
-/// The component tpye of the TTADataPickerView
+/// The component type of the TTADataPickerView
 
 public enum TTADataPickerViewType {
     /// pickerView default
     case text
-    /// datePicker default, date
+    /// datePicker
     case date
     /// date and time
     case dateTime
