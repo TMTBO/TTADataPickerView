@@ -11,7 +11,7 @@ import UIKit
 /// This Controller is used for SHOW and DISMISS the DataPickerView instance
 /// User should NOT use it to show or dismiss
 
-final class TTADataPickerViewController: UIViewController {
+internal final class TTADataPickerViewController: UIViewController {
     
     /// DataPickerView
     weak var pickerView: TTADataPickerView? = nil
