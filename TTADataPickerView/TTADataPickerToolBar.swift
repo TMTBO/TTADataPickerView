@@ -30,12 +30,12 @@ class TTADataPickerToolBar: UIToolbar {
         super.layoutSubviews()
         
         struct InternalClass {
-            static var IQUIToolbarTextButtonClass: UIControl.Type?  =   NSClassFromString("UIToolbarTextButton") as? UIControl.Type
-            static var IQUIToolbarButtonClass: UIControl.Type?      =   NSClassFromString("UIToolbarButton") as? UIControl.Type
+            static var IQUIToolbarTextButtonClass: UIControl.Type? = NSClassFromString("UIToolbarTextButton") as? UIControl.Type
+            static var IQUIToolbarButtonClass: UIControl.Type? = NSClassFromString("UIToolbarButton") as? UIControl.Type
         }
         
-        var leftRect = CGRect.null
-        var rightRect = CGRect.null
+        var leftRect = CGRect.zero
+        var rightRect = CGRect.zero
         var isTitleBarButtonFound = false
         
         let sortedSubviews = self.subviews.sorted(by: { (view1 : UIView, view2 : UIView) -> Bool in
@@ -55,21 +55,25 @@ class TTADataPickerToolBar: UIToolbar {
         for barButtonItemView in sortedSubviews {
             if (isTitleBarButtonFound == true) {
                 rightRect = barButtonItemView.frame
+                rightRect.origin.x = UIScreen.main.bounds.width - rightRect.maxX == 0 ? rightRect.origin.x - 16 : rightRect.origin.x
+                barButtonItemView.frame = rightRect
                 break
             } else if (type(of: barButtonItemView) === UIView.self) {
                 isTitleBarButtonFound = true
             } else if ((InternalClass.IQUIToolbarTextButtonClass != nil && barButtonItemView.isKind(of: InternalClass.IQUIToolbarTextButtonClass!) == true) || (InternalClass.IQUIToolbarButtonClass != nil && barButtonItemView.isKind(of: InternalClass.IQUIToolbarButtonClass!) == true)) {
                 leftRect = barButtonItemView.frame
+                leftRect.origin.x = leftRect.origin.x == 0 ? 16 : leftRect.origin.x
+                barButtonItemView.frame = leftRect
             }
         }
         
         var x : CGFloat = 16
         
-        if (leftRect.isNull == false) {
+        if (leftRect != .zero) {
             x = leftRect.maxX + 16
         }
         
-        let width : CGFloat = self.frame.width - 32 - (leftRect.isNull ? 0 : leftRect.maxX) - (rightRect.isNull ? 0 : self.frame.width - rightRect.minX)
+        let width : CGFloat = self.frame.width - 32 - (leftRect == .zero ? 0 : leftRect.maxX) - (rightRect == .zero ? 0 : self.frame.width - rightRect.minX)
         
         guard let unwrappedItems = items else { return }
         for item in unwrappedItems {
@@ -91,7 +95,7 @@ extension TTADataPickerToolBar {
     
     fileprivate func setupUI() {
         sizeToFit()
-        autoresizingMask = UIViewAutoresizing.flexibleWidth
+        autoresizingMask = [.flexibleWidth, .flexibleHeight]
         isTranslucent = true
         tintColor = UIColor.black // default tint color is black
         items = [cancelButton, flexibleSpace, titleButton, flexibleSpace, confirmButton]

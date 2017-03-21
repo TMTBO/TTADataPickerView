@@ -12,7 +12,7 @@ let dateFormatter = DateFormatter()
 
 class ViewController: UIViewController {
     
-//    let pickerView = TTADataPickerView(title: "TTADataPickerView", type: .text)
+//    let pickerView = TTADataPickerView(title: "TTADataPickerView", type: .text, delegate: nil)
 
     @IBOutlet weak var showLabel: UILabel!
     
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     // show the text type pickerView
     @IBAction func showTextType(_ sender: UIButton) {
         // configure pickerView type and the title with the initializer
-        let pickerView = TTADataPickerView(title: "TTADataPickerView", type: .text)
+        let pickerView = TTADataPickerView(title: "TTADataPickerView", type: .text, delegate: nil)
         // configure pickerView type with this property
         pickerView.type = .text
         // configure the delegate
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
     }
     // show the date type pickerView
     @IBAction func showDateType(_ sender: UIButton) {
-        let pickerView = TTADataPickerView(title: "TTADataPickerView", type: .text)
+        let pickerView = TTADataPickerView(title: "TTADataPickerView", type: .text, delegate: nil)
         pickerView.type = .date
         pickerView.delegate = self
         pickerView.show { 
@@ -59,14 +59,14 @@ class ViewController: UIViewController {
     }
     // show the time type pickerView
     @IBAction func showTimeType(_ sender: UIButton) {
-        let pickerView = TTADataPickerView(title: "TTADataPickerView", type: .text)
+        let pickerView = TTADataPickerView(title: "TTADataPickerView", type: .text, delegate: nil)
         pickerView.type = .time
         pickerView.delegate = self
         pickerView.show()
     }
     // show the dateTime type pickerView
     @IBAction func showDateTimeType(_ sender: UIButton) {
-        let pickerView = TTADataPickerView(title: "TTADataPickerView", type: .text)
+        let pickerView = TTADataPickerView(title: "TTADataPickerView", type: .text, delegate: nil)
         pickerView.type = .dateTime
         pickerView.delegate = self
         pickerView.show()
