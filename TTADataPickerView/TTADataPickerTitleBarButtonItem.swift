@@ -62,7 +62,7 @@ class TTADataPickerTitleBarButtonItem: UIBarButtonItem {
         setupUI()
     }
     
-    convenience init(title: String) {
+    convenience init(title: String?) {
         self.init()
         self.title = title
     }

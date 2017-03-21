@@ -14,7 +14,7 @@ class TTADataPickerToolBar: UIToolbar {
     let confirmButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: nil, action: nil)
     let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil
         , action: nil)
-    let titleButton = TTADataPickerTitleBarButtonItem(title: "hello world")
+    let titleButton = TTADataPickerTitleBarButtonItem(title: nil)
     
     override init(frame: CGRect) {
         super.init(frame: frame)

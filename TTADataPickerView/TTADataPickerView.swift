@@ -166,10 +166,11 @@ open class TTADataPickerView: UIView {
         setupUI()
     }
     
-    public convenience init(title: String, type: TTADataPickerViewType) {
+    public convenience init(title: String?, type: TTADataPickerViewType, delegate: TTADataPickerViewDelegate?) {
         self.init(frame: CGRect.zero)
         toolBar.titleButton.title = title
         configType(type: type)
+        self.delegate = delegate
     }
     
     private func setupUI() {

@@ -12,7 +12,7 @@ TTADataPickerView is avaibale on CocoaPods.
 
 	```
 	target 'MyApp' do
-  		pod 'TTADataPickerView', '~> 0.1'
+  		pod 'TTADataPickerView'
 	end
 	```
 	>Then run a `pod install` inside you terminal
