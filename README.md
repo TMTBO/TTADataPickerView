@@ -1,3 +1,10 @@
+# TTADataPickerView
+[![license MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/TMTBO/TTADataPickerView/blob/master/LICENSE)
+[![CocoaPods](http://img.shields.io/cocoapods/v/TTADataPickerView.svg?style=flat)](https://cocoapods.org/pods/TTADataPickerView)
+[![CocoaPods](http://img.shields.io/cocoapods/p/TTADataPickerView.svg?style=flat)](https://cocoapods.org/pods/TTADataPickerView)
+[![Build Status](https://travis-ci.org/TMTBO/TTADataPickerView.svg?branch=master)](https://travis-ci.org/TMTBO/TTADataPickerView)
+[![codecov](https://codecov.io/gh/TMTBO/TTADataPickerView/branch/master/graph/badge.svg)](https://codecov.io/gh/TMTBO/TTADataPickerView)
+
 A Swift picker view allows you to pick the titles you want and the date, time or dateTime in one view
 
 # ScreenShort & gif
