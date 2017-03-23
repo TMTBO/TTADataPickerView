@@ -36,9 +36,9 @@ TTADataPickerView is avaibale on CocoaPods.
 #Usage
 
 * 1 Initializer, you can configure the type and title
-```
-let pickerView = TTADataPickerView(title: "TTADataPickerView", type: .text)
-```
+	```
+	let pickerView = TTADataPickerView(title: "TTADataPickerView", type: .text)
+	```
 
 * 2 Configure pickerView type with this property
 
@@ -58,7 +58,7 @@ let pickerView = TTADataPickerView(title: "TTADataPickerView", type: .text)
     	case dateTime
    		/// time
     	case time
-}
+	}
 	```
 		
 * 3 Configure the delegate
@@ -106,39 +106,39 @@ let pickerView = TTADataPickerView(title: "TTADataPickerView", type: .text)
 	
 * 8 Delegate Functions
 
-```
-// MARK: - TTADataPickerViewDelegate
-
-extension ViewController: TTADataPickerViewDelegate {
-    // when the pickerView type is `.text`, you clicked the done button, you will get the titles you selected just now from the `titles` parameter
-    func dataPickerView(_ pickerView: TTADataPickerView, didSelectTitles titles: [String]) {
-        showLabel.text = titles.joined(separator: " ")
-    }
-    // when the pickerView type is NOT `.text`, you clicked the done button, you will get the date you selected just now from the `date` parameters
-    func dataPickerView(_ pickerView: TTADataPickerView, didSelectDate date: Date) {
-        // actually you need configure the dateFormatter dateStyle and timeStyle to get the currect date from the `date` parameter
-        if pickerView.type == .date {
-            dateFormatter.dateStyle = .medium
-        } else if pickerView.type == .time {
-            dateFormatter.timeStyle = .medium
-        } else if pickerView.type == .dateTime {
-            dateFormatter.dateStyle = .medium
-            dateFormatter.timeStyle = .medium
-        }
-        showLabel.text = dateFormatter.string(from: date)
-    }
-    // when the pickerView  has been changed, this function will be called, and you will get the row and component which changed just now
-    func dataPickerView(_ pickerView: TTADataPickerView, didChange row: Int, inComponent component: Int) {
-        print(#function)
-    }
-    // when you clicked the cancel button, this function will be called firstly
-    func dataPickerViewWillCancel(_ pickerView: TTADataPickerView) {
-        print(#function)
-    }
-    // when you clicked the cancel button, this function will be called at the last
-    func dataPickerViewDidCancel(_ pickerView: TTADataPickerView) {
-        print(#function)
-    }
-}
-```
+	```
+	// MARK: - TTADataPickerViewDelegate
+	
+	extension ViewController: TTADataPickerViewDelegate {
+	    // when the pickerView type is `.text`, you clicked the done button, you will get the titles you selected just now from the `titles` parameter
+	    func dataPickerView(_ pickerView: TTADataPickerView, didSelectTitles titles: [String]) {
+	        showLabel.text = titles.joined(separator: " ")
+	    }
+	    // when the pickerView type is NOT `.text`, you clicked the done button, you will get the date you selected just now from the `date` parameters
+	    func dataPickerView(_ pickerView: TTADataPickerView, didSelectDate date: Date) {
+	        // actually you need configure the dateFormatter dateStyle and timeStyle to get the currect date from the `date` parameter
+	        if pickerView.type == .date {
+	            dateFormatter.dateStyle = .medium
+	        } else if pickerView.type == .time {
+	            dateFormatter.timeStyle = .medium
+	        } else if pickerView.type == .dateTime {
+	            dateFormatter.dateStyle = .medium
+	            dateFormatter.timeStyle = .medium
+	        }
+	        showLabel.text = dateFormatter.string(from: date)
+	    }
+	    // when the pickerView  has been changed, this function will be called, and you will get the row and component which changed just now
+	    func dataPickerView(_ pickerView: TTADataPickerView, didChange row: Int, inComponent component: Int) {
+	        print(#function)
+	    }
+	    // when you clicked the cancel button, this function will be called firstly
+	    func dataPickerViewWillCancel(_ pickerView: TTADataPickerView) {
+	        print(#function)
+	    }
+	    // when you clicked the cancel button, this function will be called at the last
+	    func dataPickerViewDidCancel(_ pickerView: TTADataPickerView) {
+	        print(#function)
+	    }
+	}
+	```
 
