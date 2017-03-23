@@ -4,6 +4,8 @@ xcode_project: TTADataPickerViewDemo/TTADataPickerViewDemo.xcodeproj
 xcode_scheme: TTADataPickerViewDemo
 
 script:
+  - cd Examples
+  - xcodebuild -version
   - xcodebuild -scheme TTADataPickerViewDemo -project TTADataPickerViewDemo/TTADataPickerViewDemo.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=10.1' build test
 
 after_success:
