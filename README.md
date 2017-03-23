@@ -65,7 +65,6 @@ TTADataPickerView is avaibale on CocoaPods.
 
 	```
 	// You need to confirm `TTADataPickerViewDelegate`
-	
 	pickerView.delegate = self
 	```
 * 4 When the pickerView type is .text, configure this property to tell the pickerView what you want to select
@@ -81,8 +80,8 @@ TTADataPickerView is avaibale on CocoaPods.
 	or
 	
 	pickerView.show { 
-            // something you want to do after show the pickerView
-        }
+       // something you want to do after show the pickerView
+   }
 	```
 	
 * 6 Set the selectedTitles or selectedDate when the pickerView appers
