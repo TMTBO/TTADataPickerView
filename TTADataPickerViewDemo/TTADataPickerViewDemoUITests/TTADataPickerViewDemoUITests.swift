@@ -45,7 +45,6 @@ class TTADataPickerViewDemoUITests: XCTestCase {
         toolbarsQuery.buttons["Cancel"].tap()
         app.otherElements.containing(.staticText, identifier:"Mar 13, 2017").children(matching: .button).matching(identifier: "Date").element(boundBy: 1).tap()
         doneButton.tap()
-        
     }
     
 }

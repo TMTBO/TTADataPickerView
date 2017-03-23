@@ -10,14 +10,14 @@ import UIKit
 
 class TTADataPickerTitleBarButtonItem: UIBarButtonItem {
     
-    public var font: UIFont? {
+    public var font: UIFont? = UIFont.systemFont(ofSize: 14) {
         didSet {
             guard let titleFont = font else { return }
             titleButton.titleLabel?.font = titleFont
         }
     }
     
-    public var titleColor: UIColor? {
+    public var titleColor: UIColor? = UIColor.lightGray {
         didSet {
             guard let color = titleColor else {
                 titleButton.setTitleColor(UIColor.lightGray, for: UIControlState.disabled)

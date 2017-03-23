@@ -256,10 +256,14 @@ extension TTADataPickerView {
     }
     
     dynamic open func setTitleFont(font: UIFont) {
+//        let apperance = TTADataPickerToolBar.appearance()
+//        apperance.titleButton.font = font
         toolBar.titleButton.font = font
     }
     
     dynamic open func setTitleColor(color: UIColor) {
+//        let apperance = TTADataPickerToolBar.appearance()
+//        apperance.titleButton.titleColor = color
         toolBar.titleButton.titleColor = color
     }
     
