@@ -1,10 +1,10 @@
 A Swift picker view allows you to pick the titles you want and the date, time or dateTime in one view
 
-#ScreenShort & gif
+# ScreenShort & gif
 
 ![TTADataPickerView](https://github.com/TMTBO/TTADataPickerView/blob/master/TTADataPickerView.gif)
 
-#Installation
+# Installation
 
 TTADataPickerView is avaibale on CocoaPods.
 
@@ -25,7 +25,7 @@ TTADataPickerView is avaibale on CocoaPods.
 	
 	`import TTADataPickerView`
 	
-#Features
+# Features
 * 1 Pick Data and date in one PickerView: 
 
 	>You do not need to write UIDatePicker and UIPickerView
@@ -33,7 +33,7 @@ TTADataPickerView is avaibale on CocoaPods.
 
 	>You can configure the PickerView's apperance as you want
 
-#Usage
+# Usage
 
 * 1 Initializer, you can configure the type and title
 	```
