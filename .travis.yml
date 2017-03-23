@@ -1,7 +1,12 @@
-language: objective-c
-os: osx
+language: swift
 osx_image: xcode8.2
+xcode_project: TTADataPickerViewDemo/TTADataPickerViewDemo.xcodeproj
+xcode_scheme: TTADataPickerViewDemo
 
-env:
-  matrix:
-      - TEST_TYPE=iOS
+script:
+  - cd TTADataPickerViewDemo
+  - xcodebuild -version
+  - xcodebuild -project TTADataPickerViewDemo.xcodeproj -scheme TTADataPickerViewDemo -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=10.1' build test
+
+after_success:
+- bash <(curl -s https://codecov.io/bash)
