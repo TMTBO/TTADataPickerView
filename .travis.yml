@@ -2,3 +2,6 @@ language: objective-c
 osx_image: xcode8.2
 xcode_project: TTADataPickerViewDemo/TTADataPickerViewDemo.xcodeproj
 xcode_scheme: TTADataPickerViewDemo
+
+after_success:
+- bash <(curl -s https://codecov.io/bash)
