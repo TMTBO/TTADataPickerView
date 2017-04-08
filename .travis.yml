@@ -7,7 +7,7 @@ script:
   - cd TTADataPickerViewDemo
   - xcodebuild -version
 
-  - xcodebuild -project TTADataPickerViewDemo.xcodeproj -scheme TTADataPickerViewDemoTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name:iPhone 7'
+  - xcodebuild -project TTADataPickerViewDemo.xcodeproj -scheme TTADataPickerViewDemoTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7'
 
 after_success:
 - bash <(curl -s https://codecov.io/bash) -cF ios
