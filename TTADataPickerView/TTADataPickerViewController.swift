@@ -60,7 +60,7 @@ extension TTADataPickerViewController {
     /// - Parameters:
     ///   - pickerView: pickerView
     ///   - completion: complection handler
-    open func showPickerView(pickerView: TTADataPickerView, completion: (() -> Void)? = nil) {
+    func showPickerView(pickerView: TTADataPickerView, completion: (() -> Void)? = nil) {
         
         // Get the top viewController
         self.pickerView = pickerView
@@ -94,7 +94,7 @@ extension TTADataPickerViewController {
     /// Dismiss the pickerView
     ///
     /// - Parameter completion: completion handler
-    open func dismissWithCompletion(completion: (() -> Void)? = nil) {
+    func dismissWithCompletion(completion: (() -> Void)? = nil) {
         // Hide with animation.
         
         UIView.animate(withDuration: 0.25, delay: 0, options: UIViewAnimationOptions.beginFromCurrentState, animations: { 
@@ -114,12 +114,12 @@ extension TTADataPickerViewController {
 }
 
 // MARK: - Actions
-extension TTADataPickerViewController {
+fileprivate extension TTADataPickerViewController {
     
     /// Tap gesture action
     ///
     /// - Parameter tap: Tap gesture
-    @objc fileprivate func tap(tap: UITapGestureRecognizer) {
+    @objc func tap(tap: UITapGestureRecognizer) {
         if (tap.state == UIGestureRecognizerState.ended) {
             //Code to handle the gesture
             dismissWithCompletion()

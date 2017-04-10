@@ -55,22 +55,22 @@ class TTADataPickerToolBar: UIToolbar {
         for barButtonItemView in sortedSubviews {
             if (isTitleBarButtonFound == true) {
                 rightRect = barButtonItemView.frame
-                rightRect.origin.x = UIScreen.main.bounds.width - rightRect.maxX == 0 ? rightRect.origin.x - 16 : rightRect.origin.x
+                rightRect.origin.x = UIScreen.main.bounds.width - rightRect.maxX <= 0 ? rightRect.origin.x - 16 : rightRect.origin.x
                 barButtonItemView.frame = rightRect
                 break
             } else if (type(of: barButtonItemView) === UIView.self) {
                 isTitleBarButtonFound = true
             } else if ((InternalClass.IQUIToolbarTextButtonClass != nil && barButtonItemView.isKind(of: InternalClass.IQUIToolbarTextButtonClass!) == true) || (InternalClass.IQUIToolbarButtonClass != nil && barButtonItemView.isKind(of: InternalClass.IQUIToolbarButtonClass!) == true)) {
                 leftRect = barButtonItemView.frame
-                leftRect.origin.x = leftRect.origin.x == 0 ? 16 : leftRect.origin.x
+                leftRect.origin.x = leftRect.origin.x <= 0 ? 8 : leftRect.origin.x
                 barButtonItemView.frame = leftRect
             }
         }
         
-        var x : CGFloat = 16
+        var x : CGFloat = 8
         
         if (leftRect != .zero) {
-            x = leftRect.maxX + 16
+            x = leftRect.maxX + 8
         }
         
         let width : CGFloat = self.frame.width - 32 - (leftRect == .zero ? 0 : leftRect.maxX) - (rightRect == .zero ? 0 : self.frame.width - rightRect.minX)
@@ -91,13 +91,14 @@ class TTADataPickerToolBar: UIToolbar {
     }
 }
 
-extension TTADataPickerToolBar {
+fileprivate extension TTADataPickerToolBar {
     
-    fileprivate func setupUI() {
+    func setupUI() {
         sizeToFit()
         autoresizingMask = [.flexibleWidth, .flexibleHeight]
         isTranslucent = true
         tintColor = UIColor.black // default tint color is black
+        barTintColor = nil
         items = [cancelButton, flexibleSpace, titleButton, flexibleSpace, confirmButton]
     }
 }

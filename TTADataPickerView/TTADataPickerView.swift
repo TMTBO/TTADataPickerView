@@ -98,10 +98,10 @@ open class TTADataPickerView: UIView {
     
     // MARK: - Public properties
     
-    public weak var delegate: TTADataPickerViewDelegate?
+    weak var delegate: TTADataPickerViewDelegate?
     
     /// Picker view component type, for MORE TTADataPickerViewType
-    public var type: TTADataPickerViewType = .text {
+    var type: TTADataPickerViewType = .text {
         didSet {
             switch type {
             case .text:
@@ -124,11 +124,14 @@ open class TTADataPickerView: UIView {
     }
     
     /// When the type of pickerView is `.text`, this property should be set
-    public var textItemsForComponent: [[String]]? {
+    var textItemsForComponent: [[String]]? {
         didSet {
             pickerView?.reloadAllComponents()
         }
     }
+    /// When selected a section, is reset the other sections to 0 or not
+    /// default is `false`
+    var isAutoResetTextComponent: Bool = false
     
     // MARK: - Private properties
     fileprivate lazy var pickerView: UIPickerView? = {
@@ -239,29 +242,29 @@ extension TTADataPickerView {
     
     // MARK: - Public Functions
     // MARK: - Global apperance properties functions
-    dynamic open func setConfirmButtonAttributes(att: [String: Any]?) {
+    dynamic func setConfirmButtonAttributes(att: [String: Any]?) {
         toolBar.confirmButton.setTitleTextAttributes(att, for: .normal)
     }
     
-    dynamic open func setCancelButtonAttributes(att: [String: Any]?) {
+    dynamic func setCancelButtonAttributes(att: [String: Any]?) {
         toolBar.cancelButton.setTitleTextAttributes(att, for: .normal)
     }
     
-    dynamic open func setToolBarBarTintColor(color: UIColor?) {
+    dynamic func setToolBarBarTintColor(color: UIColor?) {
         toolBar.barTintColor = color
     }
     
-    dynamic open func setToolBarTintColor(color: UIColor?) {
+    dynamic func setToolBarTintColor(color: UIColor?) {
         toolBar.tintColor = color
     }
     
-    dynamic open func setTitleFont(font: UIFont) {
+    dynamic func setTitleFont(font: UIFont) {
 //        let apperance = TTADataPickerToolBar.appearance()
 //        apperance.titleButton.font = font
         toolBar.titleButton.font = font
     }
     
-    dynamic open func setTitleColor(color: UIColor) {
+    dynamic func setTitleColor(color: UIColor) {
 //        let apperance = TTADataPickerToolBar.appearance()
 //        apperance.titleButton.titleColor = color
         toolBar.titleButton.titleColor = color
@@ -270,12 +273,12 @@ extension TTADataPickerView {
     /// ReloadComponent
     ///
     /// - Parameter component: Component
-    open func reloadComponent(component: Int) {
+    func reloadComponent(component: Int) {
         pickerView?.reloadComponent(component)
     }
     
     /// ReloadAll Components
-    open func reloadAllComponents() {
+    func reloadAllComponents() {
         pickerView?.reloadAllComponents()
     }
     
@@ -284,7 +287,7 @@ extension TTADataPickerView {
     /// - Parameters:
     ///   - titles: Selected titles
     ///   - animated: Is select with Animation, default is true
-    open func selectedTitles(_ titles: [String]?, animated: Bool = true) {
+    func selectedTitles(_ titles: [String]?, animated: Bool = true) {
         guard type == .text else { return }
         let totalComponent = min(titles?.count ?? 0, pickerView?.numberOfComponents ?? 0)
         for component in 0..<totalComponent {
@@ -301,7 +304,7 @@ extension TTADataPickerView {
     /// - Parameters:
     ///   - date: Selected date
     ///   - animated: Is select with Animation, default is true
-    open func selectedDate(_ date: Date?, animated: Bool = true) {
+    func selectedDate(_ date: Date?, animated: Bool = true) {
         guard let selectedDate = date else { return }
         datePicker?.setDate(selectedDate, animated: animated)
     }
@@ -309,14 +312,14 @@ extension TTADataPickerView {
     /// Show the DatePickerView
     ///
     /// - Parameter completion: Complection handler
-    open func show(with completion: (() -> Void)? = nil) {
+    func show(with completion: (() -> Void)? = nil) {
         dataPickerController.showPickerView(pickerView: self, completion: completion)
     }
     
     /// Dismiss the the DatePickerView
     ///
     /// - Parameter completion: Complection handler
-    open func dismiss(with completion: (() -> Void)? = nil) {
+    func dismiss(with completion: (() -> Void)? = nil) {
         dataPickerController.dismissWithCompletion(completion: completion)
     }
 }
@@ -324,13 +327,13 @@ extension TTADataPickerView {
 // MARK: - Private Functions
 // MARK: - Actions
 
-extension TTADataPickerView {
+fileprivate extension TTADataPickerView {
     
-    @objc fileprivate func didClickCancelButton(button: UIButton) {
+    @objc func didClickCancelButton(button: UIButton) {
         dismiss()
     }
     
-    @objc fileprivate func didClickConfirmButton(button: UIButton) {
+    @objc func didClickConfirmButton(button: UIButton) {
         switch type {
         case .text:
             guard let componentCount = pickerView?.numberOfComponents else { return }
@@ -374,7 +377,9 @@ extension TTADataPickerView: UIPickerViewDelegate, UIPickerViewDataSource {
         for index in 0..<componentCount {
             guard index != component && index > component else { continue }
             pickerView.reloadComponent(index)
-            pickerView.selectRow(0, inComponent: index, animated: true)
+            if isAutoResetTextComponent {
+                pickerView.selectRow(0, inComponent: index, animated: true)
+            }
         }
         delegate?.dataPickerView(self, didChange: row, inComponent: component)
     }

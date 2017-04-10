@@ -21,12 +21,12 @@ class ViewController: UIViewController {
         
         // config the TTADataPickerView's apperance
         let apperance = TTADataPickerView.appearance()
-        apperance.setConfirmButtonAttributes(att: [NSForegroundColorAttributeName: UIColor.red])
-        apperance.setCancelButtonAttributes(att: [NSForegroundColorAttributeName: UIColor.blue])
-        apperance.setToolBarTintColor(color: .yellow)
-        apperance.setToolBarBarTintColor(color: .orange)
-        apperance.setTitleFont(font: UIFont.systemFont(ofSize: 20))
-        apperance.setTitleColor(color: .cyan)
+        apperance.setConfirmButtonAttributes(att: [NSForegroundColorAttributeName: UIColor.darkGray])
+        apperance.setCancelButtonAttributes(att: [NSForegroundColorAttributeName: UIColor.darkGray])
+        apperance.setToolBarTintColor(color: .lightGray)
+        apperance.setToolBarBarTintColor(color: UIColor(white: 0.9, alpha: 0.5))
+        apperance.setTitleFont(font: UIFont.systemFont(ofSize: 14))
+        apperance.setTitleColor(color: UIColor(colorLiteralRed: 0.0, green: 0.5, blue: 1.0, alpha: 1.0))
         
     }
     
@@ -38,6 +38,24 @@ class ViewController: UIViewController {
         pickerView.type = .text
         // configure the delegate
         pickerView.delegate = self
+        // when the pickerView type is .text, configure this property to tell the pickerView what you want to select
+        pickerView.textItemsForComponent = [["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth"], ["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth"], ["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth"]]
+        let titles = showLabel.text?.components(separatedBy: " ")
+        // set the selectedTitles when the pickerView appers
+        pickerView.selectedTitles(titles)
+        // call show() or show(with completion: (() -> Void)? = nil) to show the pickerView from the bottom of the screen
+        pickerView.show()
+    }
+    // show the text type pickerView
+    @IBAction func showTextWithAutoResetType(_ sender: UIButton) {
+        // configure pickerView type and the title with the initializer
+        let pickerView = TTADataPickerView(title: "TTADataPickerView", type: .text, delegate: nil)
+        // configure pickerView type with this property
+        pickerView.type = .text
+        // configure the delegate
+        pickerView.delegate = self
+        // When selected a section, is reset the other sections to 0
+        pickerView.isAutoResetTextComponent = true
         // when the pickerView type is .text, configure this property to tell the pickerView what you want to select
         pickerView.textItemsForComponent = [["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth"], ["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth"], ["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth"]]
         let titles = showLabel.text?.components(separatedBy: " ")

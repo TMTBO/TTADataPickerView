@@ -40,6 +40,7 @@ class TTADataPickerTitleBarButtonItem: UIBarButtonItem {
         titleButton.titleLabel?.numberOfLines = 3
         titleButton.setTitleColor(UIColor(colorLiteralRed: 0.0, green: 0.5, blue: 1.0, alpha: 1.0), for: UIControlState.normal)
         titleButton.setTitleColor(UIColor.lightGray, for: UIControlState.disabled)
+        titleButton.backgroundColor = .clear
         titleButton.titleLabel?.textAlignment = NSTextAlignment.center
         titleButton.titleLabel?.font = UIFont.systemFont(ofSize: 13.0)
         titleButton.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -68,9 +69,9 @@ class TTADataPickerTitleBarButtonItem: UIBarButtonItem {
     }
 }
 
-extension TTADataPickerTitleBarButtonItem {
+fileprivate extension TTADataPickerTitleBarButtonItem {
     
-    fileprivate func setupUI() {
+    func setupUI() {
         titleView.addSubview(titleButton)
         customView = titleView
     }
