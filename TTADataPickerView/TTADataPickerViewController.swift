@@ -60,7 +60,7 @@ extension TTADataPickerViewController {
     /// - Parameters:
     ///   - pickerView: pickerView
     ///   - completion: complection handler
-    func showPickerView(pickerView: TTADataPickerView, completion: (() -> Void)? = nil) {
+    public func showPickerView(pickerView: TTADataPickerView, completion: (() -> Void)? = nil) {
         
         // Get the top viewController
         self.pickerView = pickerView
@@ -94,7 +94,7 @@ extension TTADataPickerViewController {
     /// Dismiss the pickerView
     ///
     /// - Parameter completion: completion handler
-    func dismissWithCompletion(completion: (() -> Void)? = nil) {
+    public func dismissWithCompletion(completion: (() -> Void)? = nil) {
         // Hide with animation.
         
         UIView.animate(withDuration: 0.25, delay: 0, options: UIViewAnimationOptions.beginFromCurrentState, animations: { 
