@@ -68,6 +68,8 @@ class ViewController: UIViewController {
     @IBAction func showDateType(_ sender: UIButton) {
         let pickerView = TTADataPickerView(title: "TTADataPickerView", type: .text, delegate: nil)
         pickerView.type = .date
+        pickerView.minimumDate = Date(timeIntervalSinceNow: -24 * 60 * 60)
+        pickerView.maximumDate = Date(timeIntervalSinceNow: 24 * 60 * 60)
         pickerView.delegate = self
         pickerView.show { 
             UIView.animate(withDuration: 0.3, animations: { 
@@ -79,6 +81,8 @@ class ViewController: UIViewController {
     @IBAction func showTimeType(_ sender: UIButton) {
         let pickerView = TTADataPickerView(title: "TTADataPickerView", type: .text, delegate: nil)
         pickerView.type = .time
+        pickerView.minimumDate = Date(timeIntervalSinceNow: -60 * 60)
+        pickerView.maximumDate = Date(timeIntervalSinceNow: 60 * 60)
         pickerView.delegate = self
         pickerView.show()
     }

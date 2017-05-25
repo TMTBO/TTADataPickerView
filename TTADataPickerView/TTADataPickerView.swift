@@ -129,6 +129,22 @@ open class TTADataPickerView: UIView {
             pickerView?.reloadAllComponents()
         }
     }
+    
+    /// When the type of datePicker is `.date`, `dateTime`, `time`, this property can be set.
+    /// specify min/max date range. default is nil. When min > max, the values are ignored. Ignored in countdown timer mode
+    public var minimumDate: Date? {
+        didSet {
+            datePicker?.minimumDate = minimumDate
+        }
+    }
+    
+    /// When the type of datePicker is `.date`, `dateTime`, `time`, this property can be set
+    public var maximumDate: Date? {
+        didSet {
+            datePicker?.maximumDate = maximumDate
+        }
+    }
+    
     /// When selected a section, is reset the other sections to 0 or not
     /// default is `false`
     public var isAutoResetTextComponent: Bool = false
