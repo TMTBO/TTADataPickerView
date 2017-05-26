@@ -13,13 +13,13 @@
 		7961D2FA1E763BA700E92369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7961D2F91E763BA700E92369 /* Assets.xcassets */; };
 		7961D2FD1E763BA700E92369 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7961D2FB1E763BA700E92369 /* LaunchScreen.storyboard */; };
 		7961D3131E763BA700E92369 /* TTADataPickerViewDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961D3121E763BA700E92369 /* TTADataPickerViewDemoUITests.swift */; };
-		7961D3371E76717100E92369 /* TTADataPickerTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961D3331E76717100E92369 /* TTADataPickerTitleBarButtonItem.swift */; };
-		7961D3381E76717100E92369 /* TTADataPickerToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961D3341E76717100E92369 /* TTADataPickerToolBar.swift */; };
-		7961D3391E76717100E92369 /* TTADataPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961D3351E76717100E92369 /* TTADataPickerView.swift */; };
-		7961D33A1E76717100E92369 /* TTADataPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961D3361E76717100E92369 /* TTADataPickerViewController.swift */; };
 		7968F40C1E836F2100B0D595 /* TTADataPickerTitleBarButtonItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7968F40B1E836F2100B0D595 /* TTADataPickerTitleBarButtonItemTests.swift */; };
 		7968F40E1E83786400B0D595 /* TTADataPickerToolBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7968F40D1E83786400B0D595 /* TTADataPickerToolBarTests.swift */; };
 		7968F4101E837C3F00B0D595 /* TTADataPickerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7968F40F1E837C3F00B0D595 /* TTADataPickerViewTests.swift */; };
+		797D33371ED7EF7500B3966C /* TTADataPickerTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797D33331ED7EF7500B3966C /* TTADataPickerTitleBarButtonItem.swift */; };
+		797D33381ED7EF7500B3966C /* TTADataPickerToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797D33341ED7EF7500B3966C /* TTADataPickerToolBar.swift */; };
+		797D33391ED7EF7500B3966C /* TTADataPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797D33351ED7EF7500B3966C /* TTADataPickerView.swift */; };
+		797D333A1ED7EF7500B3966C /* TTADataPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797D33361ED7EF7500B3966C /* TTADataPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,13 +52,13 @@
 		7961D30E1E763BA700E92369 /* TTADataPickerViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTADataPickerViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7961D3121E763BA700E92369 /* TTADataPickerViewDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTADataPickerViewDemoUITests.swift; sourceTree = "<group>"; };
 		7961D3141E763BA700E92369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7961D3331E76717100E92369 /* TTADataPickerTitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTADataPickerTitleBarButtonItem.swift; sourceTree = "<group>"; };
-		7961D3341E76717100E92369 /* TTADataPickerToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTADataPickerToolBar.swift; sourceTree = "<group>"; };
-		7961D3351E76717100E92369 /* TTADataPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTADataPickerView.swift; sourceTree = "<group>"; };
-		7961D3361E76717100E92369 /* TTADataPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTADataPickerViewController.swift; sourceTree = "<group>"; };
 		7968F40B1E836F2100B0D595 /* TTADataPickerTitleBarButtonItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTADataPickerTitleBarButtonItemTests.swift; sourceTree = "<group>"; };
 		7968F40D1E83786400B0D595 /* TTADataPickerToolBarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTADataPickerToolBarTests.swift; sourceTree = "<group>"; };
 		7968F40F1E837C3F00B0D595 /* TTADataPickerViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTADataPickerViewTests.swift; sourceTree = "<group>"; };
+		797D33331ED7EF7500B3966C /* TTADataPickerTitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTADataPickerTitleBarButtonItem.swift; sourceTree = "<group>"; };
+		797D33341ED7EF7500B3966C /* TTADataPickerToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTADataPickerToolBar.swift; sourceTree = "<group>"; };
+		797D33351ED7EF7500B3966C /* TTADataPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTADataPickerView.swift; sourceTree = "<group>"; };
+		797D33361ED7EF7500B3966C /* TTADataPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTADataPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +89,7 @@
 		7961D2E61E763BA700E92369 = {
 			isa = PBXGroup;
 			children = (
-				7961D3321E76717100E92369 /* TTADataPickerView */,
+				797D33321ED7EF7500B3966C /* TTADataPickerView */,
 				7961D2F11E763BA700E92369 /* TTADataPickerViewDemo */,
 				7961D3061E763BA700E92369 /* TTADataPickerViewDemoTests */,
 				7961D3111E763BA700E92369 /* TTADataPickerViewDemoUITests */,
@@ -140,13 +140,13 @@
 			path = TTADataPickerViewDemoUITests;
 			sourceTree = "<group>";
 		};
-		7961D3321E76717100E92369 /* TTADataPickerView */ = {
+		797D33321ED7EF7500B3966C /* TTADataPickerView */ = {
 			isa = PBXGroup;
 			children = (
-				7961D3331E76717100E92369 /* TTADataPickerTitleBarButtonItem.swift */,
-				7961D3341E76717100E92369 /* TTADataPickerToolBar.swift */,
-				7961D3351E76717100E92369 /* TTADataPickerView.swift */,
-				7961D3361E76717100E92369 /* TTADataPickerViewController.swift */,
+				797D33331ED7EF7500B3966C /* TTADataPickerTitleBarButtonItem.swift */,
+				797D33341ED7EF7500B3966C /* TTADataPickerToolBar.swift */,
+				797D33351ED7EF7500B3966C /* TTADataPickerView.swift */,
+				797D33361ED7EF7500B3966C /* TTADataPickerViewController.swift */,
 			);
 			name = TTADataPickerView;
 			path = ../TTADataPickerView;
@@ -290,10 +290,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7961D2F51E763BA700E92369 /* ViewController.swift in Sources */,
-				7961D3391E76717100E92369 /* TTADataPickerView.swift in Sources */,
-				7961D33A1E76717100E92369 /* TTADataPickerViewController.swift in Sources */,
-				7961D3381E76717100E92369 /* TTADataPickerToolBar.swift in Sources */,
-				7961D3371E76717100E92369 /* TTADataPickerTitleBarButtonItem.swift in Sources */,
+				797D33391ED7EF7500B3966C /* TTADataPickerView.swift in Sources */,
+				797D333A1ED7EF7500B3966C /* TTADataPickerViewController.swift in Sources */,
+				797D33381ED7EF7500B3966C /* TTADataPickerToolBar.swift in Sources */,
+				797D33371ED7EF7500B3966C /* TTADataPickerTitleBarButtonItem.swift in Sources */,
 				7961D2F31E763BA700E92369 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
