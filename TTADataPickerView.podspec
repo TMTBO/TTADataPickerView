@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TTADataPickerView"
-  s.version      = "0.1.6"
+  s.version      = "0.2.0"
   s.summary      = "A Swift mixed data selector"
 
   # This description is used to generate tags and improve search results.
