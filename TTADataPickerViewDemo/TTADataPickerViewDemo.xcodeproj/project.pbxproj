@@ -220,7 +220,7 @@
 				TargetAttributes = {
 					7961D2EE1E763BA700E92369 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = EPSPHDMRQR;
+						DevelopmentTeam = VY3QK58G7F;
 						ProvisioningStyle = Automatic;
 					};
 					7961D3021E763BA700E92369 = {
@@ -448,7 +448,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EPSPHDMRQR;
+				DEVELOPMENT_TEAM = VY3QK58G7F;
 				INFOPLIST_FILE = TTADataPickerViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = win.tobyotenma.www.TTADataPickerViewDemo;
@@ -461,7 +461,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EPSPHDMRQR;
+				DEVELOPMENT_TEAM = VY3QK58G7F;
 				INFOPLIST_FILE = TTADataPickerViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = win.tobyotenma.www.TTADataPickerViewDemo;

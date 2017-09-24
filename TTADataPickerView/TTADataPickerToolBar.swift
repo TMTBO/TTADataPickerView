@@ -29,25 +29,22 @@ class TTADataPickerToolBar: UIToolbar {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        struct InternalClass {
-            static var IQUIToolbarTextButtonClass: UIControl.Type? = NSClassFromString("UIToolbarTextButton") as? UIControl.Type
-            static var IQUIToolbarButtonClass: UIControl.Type? = NSClassFromString("UIToolbarButton") as? UIControl.Type
+        if #available(iOS 11.0, *) {
+            return
         }
-        
         var leftRect = CGRect.zero
         var rightRect = CGRect.zero
         var isTitleBarButtonFound = false
         
-        let sortedSubviews = self.subviews.sorted(by: { (view1 : UIView, view2 : UIView) -> Bool in
-            
+        let sortedSubviews = subviews.sorted(by: { (view1 : UIView, view2 : UIView) -> Bool in
             let x1 = view1.frame.minX
-            let y1 = view1.frame.minY
             let x2 = view2.frame.minX
-            let y2 = view2.frame.minY
             
             if x1 != x2 {
                 return x1 < x2
             } else {
+                let y1 = view1.frame.minY
+                let y2 = view2.frame.minY
                 return y1 < y2
             }
         })
@@ -55,15 +52,11 @@ class TTADataPickerToolBar: UIToolbar {
         for barButtonItemView in sortedSubviews {
             if (isTitleBarButtonFound == true) {
                 rightRect = barButtonItemView.frame
-                rightRect.origin.x = UIScreen.main.bounds.width - rightRect.maxX <= 0 ? rightRect.origin.x - 16 : rightRect.origin.x
-                barButtonItemView.frame = rightRect
                 break
-            } else if (type(of: barButtonItemView) === UIView.self) {
+            } else if (barButtonItemView.isMember(of: UIView.self)) {
                 isTitleBarButtonFound = true
-            } else if ((InternalClass.IQUIToolbarTextButtonClass != nil && barButtonItemView.isKind(of: InternalClass.IQUIToolbarTextButtonClass!) == true) || (InternalClass.IQUIToolbarButtonClass != nil && barButtonItemView.isKind(of: InternalClass.IQUIToolbarButtonClass!) == true)) {
+            } else if (barButtonItemView.isKind(of: UIControl.self)) {
                 leftRect = barButtonItemView.frame
-                leftRect.origin.x = leftRect.origin.x <= 0 ? 8 : leftRect.origin.x
-                barButtonItemView.frame = leftRect
             }
         }
         
@@ -73,15 +66,9 @@ class TTADataPickerToolBar: UIToolbar {
             x = leftRect.maxX + 8
         }
         
-        let width : CGFloat = self.frame.width - 32 - (leftRect == .zero ? 0 : leftRect.maxX) - (rightRect == .zero ? 0 : self.frame.width - rightRect.minX)
+        let width : CGFloat = rightRect.minX - leftRect.maxX - 16
         
-        guard let unwrappedItems = items else { return }
-        for item in unwrappedItems {
-            guard let newItem = item as? TTADataPickerTitleBarButtonItem else { continue }
-            let titleRect = CGRect(x: x, y: 0, width: width, height: self.frame.size.height)
-            newItem.customView?.frame = titleRect
-            break
-        }
+        titleButton.customView?.frame = CGRect(x: x, y: 0, width: width, height: self.frame.size.height)
     }
 
     override func sizeThatFits(_ size: CGSize) -> CGSize {
