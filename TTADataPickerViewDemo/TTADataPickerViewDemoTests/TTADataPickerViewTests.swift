@@ -46,24 +46,24 @@ class TTADataPickerViewTests: XCTestCase {
     func testApperanceConfirmButtonAttributes() {
         // given
         let apperance = TTADataPickerView.appearance()
-        let att = [NSForegroundColorAttributeName: UIColor.red]
+        let att = [NSAttributedString.Key.foregroundColor: UIColor.red]
         // when
         apperance.setConfirmButtonAttributes(att: att)
         // then
         if let attribute = picker.confirmButtonAttributes {
-            XCTAssert(attribute[NSForegroundColorAttributeName] as? UIColor == att[NSForegroundColorAttributeName])
+            XCTAssert(attribute[NSAttributedString.Key.foregroundColor] as? UIColor == att[NSAttributedString.Key.foregroundColor])
         }
     }
     
     func testApperanceCancelButtonAttributes() {
         // given
         let apperance = TTADataPickerView.appearance()
-        let att = [NSForegroundColorAttributeName: UIColor.red]
+        let att = [NSAttributedString.Key.foregroundColor: UIColor.red]
         // when
         apperance.setCancelButtonAttributes(att: att)
         // then
         if let attribute = picker.cancelButtonAttributes {
-            XCTAssert(attribute[NSForegroundColorAttributeName] as? UIColor == att[NSForegroundColorAttributeName])
+            XCTAssert(attribute[NSAttributedString.Key.foregroundColor] as? UIColor == att[NSAttributedString.Key.foregroundColor])
         }
     }
     

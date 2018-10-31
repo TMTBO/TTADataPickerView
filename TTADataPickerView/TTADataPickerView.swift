@@ -103,22 +103,18 @@ open class TTADataPickerView: UIView {
     /// Picker view component type, for MORE TTADataPickerViewType
     public var type: TTADataPickerViewType = .text {
         didSet {
+            let isText = type == .text
+            pickerView?.isHidden = !isText
+            datePicker?.isHidden = isText
             switch type {
             case .text:
-                pickerView?.isHidden = false
-                datePicker?.isHidden = true
+                break
             case .date:
                 datePicker?.datePickerMode = .date
-                pickerView?.isHidden = true
-                datePicker?.isHidden = false
             case .dateTime:
                 datePicker?.datePickerMode = .dateAndTime
-                pickerView?.isHidden = true
-                datePicker?.isHidden = false
             case .time:
                 datePicker?.datePickerMode = .time
-                pickerView?.isHidden = true
-                datePicker?.isHidden = false
             }
         }
     }
@@ -220,11 +216,11 @@ extension TTADataPickerView {
     
     // MARK: - Public ReadOnly properties, Global apperance properties
     
-    public var cancelButtonAttributes: [String: Any]? {
+    public var cancelButtonAttributes: [NSAttributedString.Key: Any]? {
         return toolBar.cancelButton.titleTextAttributes(for: .normal)
     }
     
-    public var confirmButtonAttributes: [String: Any]? {
+    public var confirmButtonAttributes: [NSAttributedString.Key: Any]? {
         return toolBar.confirmButton.titleTextAttributes(for: .normal)
     }
     
@@ -246,29 +242,29 @@ extension TTADataPickerView {
     
     // MARK: - Public Functions
     // MARK: - Global apperance properties functions
-    public dynamic func setConfirmButtonAttributes(att: [String: Any]?) {
+    @objc public dynamic func setConfirmButtonAttributes(att: [NSAttributedString.Key: Any]?) {
         toolBar.confirmButton.setTitleTextAttributes(att, for: .normal)
     }
     
-    public dynamic func setCancelButtonAttributes(att: [String: Any]?) {
+    @objc public dynamic func setCancelButtonAttributes(att: [NSAttributedString.Key: Any]?) {
         toolBar.cancelButton.setTitleTextAttributes(att, for: .normal)
     }
     
-    public dynamic func setToolBarBarTintColor(color: UIColor?) {
+    @objc public dynamic func setToolBarBarTintColor(color: UIColor?) {
         toolBar.barTintColor = color
     }
     
-    public dynamic func setToolBarTintColor(color: UIColor?) {
+    @objc public dynamic func setToolBarTintColor(color: UIColor?) {
         toolBar.tintColor = color
     }
     
-    public dynamic func setTitleFont(font: UIFont) {
+    @objc public dynamic func setTitleFont(font: UIFont) {
 //        let apperance = TTADataPickerToolBar.appearance()
 //        apperance.titleButton.font = font
         toolBar.titleButton.font = font
     }
     
-    public dynamic func setTitleColor(color: UIColor) {
+    @objc public dynamic func setTitleColor(color: UIColor) {
 //        let apperance = TTADataPickerToolBar.appearance()
 //        apperance.titleButton.titleColor = color
         toolBar.titleButton.titleColor = color

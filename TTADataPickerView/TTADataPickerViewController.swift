@@ -78,11 +78,11 @@ extension TTADataPickerViewController {
         // Add put it's view as a subView of the topController's view
         view.frame = CGRect(x: 0, y: 0, width: topController?.view.bounds.width ?? 0, height: topController?.view.bounds.height ?? 0)
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        topController?.addChildViewController(self)
+        topController?.addChild(self)
         topController?.view.addSubview(self.view)
         
         // Show anmiation
-        UIView.animate(withDuration: 0.25, delay: 0, options: UIViewAnimationOptions.beginFromCurrentState, animations: { 
+        UIView.animate(withDuration: 0.25, delay: 0, options: UIView.AnimationOptions.beginFromCurrentState, animations: {
             self.view.backgroundColor = UIColor(white: 0.0, alpha: 0.5)
             pickerView.frame.origin.y = self.view.bounds.size.height - pickerView.frame.size.height
         }) { (_) in
@@ -97,15 +97,15 @@ extension TTADataPickerViewController {
     public func dismissWithCompletion(completion: (() -> Void)? = nil) {
         // Hide with animation.
         
-        UIView.animate(withDuration: 0.25, delay: 0, options: UIViewAnimationOptions.beginFromCurrentState, animations: { 
+        UIView.animate(withDuration: 0.25, delay: 0, options: UIView.AnimationOptions.beginFromCurrentState, animations: {
             self.view.backgroundColor  = .clear
             self.pickerView?.frame.origin.y = self.view.bounds.size.height
         }) { (_) in
             // Remove pickerView, self.view and self
             self.pickerView?.removeFromSuperview()
-            self.willMove(toParentViewController: nil)
+            self.willMove(toParent: nil)
             self.view.removeFromSuperview()
-            self.removeFromParentViewController()
+            self.removeFromParent()
             
             guard let handle = completion else { return }
             handle()
@@ -120,7 +120,7 @@ fileprivate extension TTADataPickerViewController {
     ///
     /// - Parameter tap: Tap gesture
     @objc func tap(tap: UITapGestureRecognizer) {
-        if (tap.state == UIGestureRecognizerState.ended) {
+        if (tap.state == UIGestureRecognizer.State.ended) {
             //Code to handle the gesture
             dismissWithCompletion()
         }
