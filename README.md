@@ -63,7 +63,7 @@ TTADataPickerView is avaibale on CocoaPods.
     	case date
     	/// date and time
     	case dateTime
-   		/// time
+        /// time
     	case time
 	}
 	```
