@@ -141,6 +141,13 @@ open class TTADataPickerView: UIView {
         }
     }
     
+    /// When the type of datePicker is `.date`, `dateTime`, `time`, this property can be set. Default: [Locale current]
+    public var dateLocale: Locale? {
+        didSet {
+            datePicker?.locale = dateLocale
+        }
+    }
+    
     /// When selected a section, is reset the other sections to 0 or not
     /// default is `false`
     public var isAutoResetTextComponent: Bool = false
@@ -259,14 +266,10 @@ extension TTADataPickerView {
     }
     
     @objc public dynamic func setTitleFont(font: UIFont) {
-//        let apperance = TTADataPickerToolBar.appearance()
-//        apperance.titleButton.font = font
         toolBar.titleButton.font = font
     }
     
     @objc public dynamic func setTitleColor(color: UIColor) {
-//        let apperance = TTADataPickerToolBar.appearance()
-//        apperance.titleButton.titleColor = color
         toolBar.titleButton.titleColor = color
     }
     

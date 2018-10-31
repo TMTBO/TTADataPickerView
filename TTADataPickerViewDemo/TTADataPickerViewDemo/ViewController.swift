@@ -93,6 +93,7 @@ class ViewController: UIViewController {
     @IBAction func showDateTimeType(_ sender: UIButton) {
         let pickerView = TTADataPickerView(title: "TTADataPickerView", type: .text, delegate: nil)
         pickerView.type = .dateTime
+        pickerView.dateLocale = Locale(identifier: "zh_CN")
         pickerView.delegate = self
         pickerView.show()
     }
